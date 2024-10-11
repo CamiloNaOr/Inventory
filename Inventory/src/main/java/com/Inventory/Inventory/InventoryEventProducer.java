@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class InventoryEventProducer {
 
-    private static final String TOPIC_RESERVED = "inventory-reserved"; // Topic para el evento InventoryReserved
-    private static final String TOPIC_FAILED = "inventory-failed"; // Topic para el evento InventoryFailed
+    private static final String TOPIC_RESERVED = "InventoryReserved"; // Topic para el evento InventoryReserved
+    private static final String TOPIC_FAILED = "InventoryFailed"; // Topic para el evento InventoryFailed
 
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
