@@ -1,27 +1,30 @@
 package com.Inventory.Inventory;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "producto")
 public class Producto {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idProducto;
+    @Column(name = "id_producto", nullable = false)
+    private Integer id;
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "valor")
     private Double valor;
-    private Integer cantidad; // Inventario disponible
 
-    // Getters y Setters
+    @Column(name = "cantidad", nullable = false)
+    private Integer cantidad;
 
-    public Integer getIdProducto() {
-        return idProducto;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -47,5 +50,5 @@ public class Producto {
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
-}
 
+}

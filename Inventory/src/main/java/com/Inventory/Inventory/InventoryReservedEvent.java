@@ -4,31 +4,31 @@ import java.util.List;
 
 public class InventoryReservedEvent {
 
-    private String orderId;
-    private List<String> productList;
+    private int orderId;
+    private List<ProductoDto> productList;
     private String status;
 
     // Constructor, Getters y Setters
 
-    public InventoryReservedEvent(int orderId, List<String> productList, String status) {
+    public InventoryReservedEvent(int orderId, List<ProductoDto> productList, String status) {
         this.orderId = orderId;
         this.productList = productList;
         this.status = status;
     }
 
-    public String getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 
-    public List<String> getProductList() {
+    public List<ProductoDto> getProductList() {
         return productList;
     }
 
-    public void setProductList(List<String> productList) {
+    public void setProductList(List<ProductoDto> productList) {
         this.productList = productList;
     }
 

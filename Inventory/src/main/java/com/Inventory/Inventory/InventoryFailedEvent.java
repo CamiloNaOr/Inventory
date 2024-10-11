@@ -4,33 +4,33 @@ import java.util.List;
 
 public class InventoryFailedEvent {
 
-    private String orderId;
-    private List<String> productList;
+    private int orderId;
+    private List<ProductoDto> productList;
     private String status;
     private String reason;
 
     // Constructor, Getters y Setters
 
-    public InventoryFailedEvent(int orderId, List<String> productList, String status, String reason) {
+    public InventoryFailedEvent(int orderId, List<ProductoDto> productList, String status, String reason) {
         this.orderId = orderId;
         this.productList = productList;
         this.status = status;
         this.reason = reason;
     }
 
-    public String getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 
-    public List<String> getProductList() {
+    public List<ProductoDto> getProductList() {
         return productList;
     }
 
-    public void setProductList(List<String> productList) {
+    public void setProductList(List<ProductoDto> productList) {
         this.productList = productList;
     }
 

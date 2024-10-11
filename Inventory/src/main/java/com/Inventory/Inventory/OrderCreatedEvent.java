@@ -3,13 +3,13 @@ package com.Inventory.Inventory;
 import java.util.List;
 
 public class OrderCreatedEvent {
-
     private int orderId;
     private int customerId;
-    private List<String> productList;
-    private Double totalAmount;
+    private List<ProductoDto> productList;
+    private double totalAmount;
 
     // Getters y Setters
+
     public int getOrderId() {
         return orderId;
     }
@@ -26,22 +26,19 @@ public class OrderCreatedEvent {
         this.customerId = customerId;
     }
 
-    public List<String> getProductList() {
+    public List<ProductoDto> getProductList() {
         return productList;
     }
 
-    public void setProductList(List<String> productList) {
+    public void setProductList(List<ProductoDto> productList) {
         this.productList = productList;
     }
 
-    public Double getTotalAmount() {
+    public double getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(Double totalAmount) {
+    public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
-
-    // Constructor y otros métodos si es necesario
 }
-
